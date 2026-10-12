@@ -1,0 +1,28 @@
+name: getmcp-telegram-qa
+services:
+  db:
+    image: mariadb:11.4
+    environment:
+      MARIADB_ROOT_PASSWORD: fixture-only-root
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: fixture-only-db
+    volumes: [db:/var/lib/mysql]
+  wordpress:
+    build: {context: ., dockerfile: Dockerfile}
+    ports: ["127.0.0.1:8932:80"]
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: fixture-only-db
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wp:/var/www/html
+      - ../:/var/www/html/wp-content/plugins/getmcp-telegram
+      - ../../getmcp-extensions:/var/www/html/wp-content/plugins/getmcp-extensions:ro
+      - ../../../qa-vendor-getmcp-1.7.0/getmcp:/var/www/html/wp-content/plugins/getmcp:ro
+      - sessions:/var/private-telegram
+volumes:
+  db:
+  wp:
+  sessions:

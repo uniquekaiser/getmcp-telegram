@@ -1,0 +1,65 @@
+{
+  "inputs": {
+    "CHANGELOG.md": "072c6d403fbed72987d800e9f99fe823ef57fe489aadc84b7f157890e734e2a0",
+    "composer.json": "74a0455f95fb8ab93d3aeedc83a7e3ba706d696ed1f271f9f6857639c9003e93",
+    "composer.lock": "f54845cca7cb5338cd23fef4110b1cd47bc0f601426fdd42c2ca276d4d68c1a8",
+    "getmcp-telegram.php": "37b917893a569cd77ff48887b20b375a22988d97c31fc7b59dd85fbfeb7cd2e4",
+    "readme.txt": "8128cdd73928c3072666462b27a85b835417f5ab0e53e77426c5d586036fa562",
+    "vendor-patch.json": "f113ab78d3573966e6bc04029cc0e58fab4ceb5f07e99a76d8bd982411a1345e",
+    "assets/admin.js": "ffda7a9be442dbef2b99c7ac0c596a2d9f82e72e2159e1bee3187ba453794147",
+    "assets/integration.js": "b2363f1be72070d2b723016527287192fad762a54dd12650a8e912dbef63d141",
+    "includes/AdminIntegration.php": "7cd93f8ab8d31fafb8caad2f0a669d19c89e235769d6c764d7e9ba824f98808a",
+    "includes/Catalog.php": "96c647cb345bc49957ad74b678cd6bf11e97e4c885827e8d604fd09f3bfb30ad",
+    "includes/Client.php": "90e5c8a241fecf4a28933ee70501b470e064975f0e5d6f5b415ca0ab8d359c9a",
+    "includes/Diagnostics.php": "23e6e2195a3ea0658072a93b66563bd7b20a809d8b8c459259fb4bb01ba0c2e2",
+    "includes/Fault.php": "8e7dc4eeca83875f79f3e19fb1de6bb73d9df886f2b5e4bf8ec10c265f4221f8",
+    "includes/Integration.php": "d86c0c8c159bedc5b624853bdf0eb40d02c720674df76c4518f678ceb2e3e4dd",
+    "includes/Normalize.php": "f434425700e4fe10d27345f0cbef0dd36cd6215a3aa0010e7e40e058b9a59aca",
+    "includes/Plugin.php": "33035549f6dfefd8b91de8a4beb4f3cd7ae5303e248ab1ff500fd39fb25da457",
+    "includes/PrimeFactor.php": "78391ffe1dee994ad9baf15311ec08936567e5bd9d0695c71ef9b04f94fd4431",
+    "includes/Store.php": "486972b8f35b6ab3f25c9bfda5f3fd9f316fc3fecf0c5ffc58005be7f2863534",
+    "includes/Updater.php": "0ed859cd082ef5d0b7715ff29d8188d518803972537e5a9c266d3e0c8edd9a35",
+    "includes/Vault.php": "5e89d9708fd371a1da5f391e0f6046428304ea78fe4b8b3cf515ae0f947ee41e",
+    "tests/admin-integration.php": "5a2881cd252312bbdc4ab3f22c75ad863567bb35ce7356cfd21bd246c41e2cf6",
+    "tests/catalog-contract.php": "9fbf4cb84a8d925a62f47ef206e9e7e9f976da89e47720592904d5544690bf65",
+    "tests/factorization.php": "efdd69f5aa57f3cd61d5cc055998e28cc684c6b7a06063b93a3dac77a688926c",
+    "tests/fake-driver.php": "8539c30698c367bebc1299bc03eecf268cb9a35cc5e3e72974702722dba436aa",
+    "tests/fixture-cleanup.php": "2a9a7491b13f3b8ac2d906d44f09fc9f2a54b8471be1e595def02b9e028acf97",
+    "tests/integration.php": "80d562a7725da5d900788996459e423dc566a276342c52766058ebc9dc2a85a7",
+    "tests/marketing-catalogue.php": "89e9d8f28b49114370dcb17059d13944d18fdf3c5df142d86bae2a56ce19b976",
+    "tests/updater.php": "3ae6b515dee9c4df6c0ce6bcdd1a2a64f3244e143fb8f777585d695ae6b3ef22",
+    "tools/build.py": "b4d8f28160b4f9608d9f10ee6aa8bc0b7bf474863a5fd59dbf46a956e397dc13",
+    "tools/patch-runtime.py": "a46919f05c4c503471db5e2304b50f765d92aa3a11cbe6d2b610cfcb9a4abe5d",
+    "tools/release.py": "46701fa0a6d1bacd12f53eb665995e6c9d94468a6184809e24c52c0d92a69f42",
+    "tools/test-definitions.py": "6bf217a3307a6b2e4a4538b52c40c68c3bd7d1058161f5559cdbbd30586ff5e2",
+    "docs/testing/test-definitions.json": "bd7ca175519d17391764d79b6546ef43cab5c6a2aa7c17ea5e0a86c4ac7600b0",
+    ".github/workflows/release.yml": "54897dfe02c13fed0566c06a8033d975dc9087d6392300264117d3db5eaf2422"
+  },
+  "integration": {
+    "passed": 60,
+    "failed": [],
+    "driver": "synthetic",
+    "real_telegram": "unavailable: credentials not provided"
+  },
+  "environment": {
+    "wordpress": "7.1.3",
+    "php": "8.3.28",
+    "getmcp": "1.7.0"
+  },
+  "passed": [
+    "60 synthetic integration checks",
+    "62 OAuth regressions",
+    "33 access regressions",
+    "5 marketing draft installations",
+    "Telegram template REST permissions",
+    "updater exact-asset and source guard contracts",
+    "browser catalogue search and navigation",
+    "browser marketing draft installation"
+  ],
+  "unavailable": [
+    "Real Telegram accounts and production session transport",
+    "Normal prior-version public updater upgrade: first release not published",
+    "PHP 8.4 and other hosting platforms"
+  ],
+  "hosted": "Not dispatched; tag-only release workflow configured"
+}

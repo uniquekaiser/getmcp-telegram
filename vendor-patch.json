@@ -1,0 +1,71 @@
+{
+  "library": "danog/madelineproto",
+  "version": "8.7.0",
+  "file": "vendor/danog/madelineproto/src/Settings/Ipc.php",
+  "before": "return Magic::$isIpcWorker || \\PHP_OS_FAMILY === 'Windows';",
+  "after": "return true; // Synergetic: request-scoped full sessions; never spawn IPC workers.",
+  "sha256": "265e9f0acbed9ffb00059fecba1b4cfce1d1469385f79505264a6e58a5cd07ab",
+  "patches": [
+    {
+      "file": "vendor/danog/madelineproto/src/Magic.php",
+      "before": "ini_set('memory_limit', -1);",
+      "after": "// Synergetic: preserve the hosting PHP memory limit."
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/Magic.php",
+      "before": "set_time_limit(-1);",
+      "after": "// Synergetic: preserve the hosting PHP execution limit."
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/Magic.php",
+      "before": "ini_set('error_log', self::$script_cwd.DIRECTORY_SEPARATOR.'MadelineProto.log');",
+      "after": "// Synergetic: preserve the WordPress PHP error log location."
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/Magic.php",
+      "before": "error_reporting(E_ALL);",
+      "after": "// Synergetic: preserve the WordPress PHP error reporting level."
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/Magic.php",
+      "before": "ini_set('log_errors', 1);",
+      "after": "// Synergetic: preserve the WordPress PHP error logging setting."
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/Ipc/Runner/entry.php",
+      "after": "if (PHP_SAPI !== 'cli' && !defined('GETMCP_TELEGRAM_PATH')) { http_response_code(403); exit; }"
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/MTProtoSession/AuthKeyHandler.php",
+      "before": "                    'native_single_cpp',\n                    'python_single_alt',\n                    'python_single',\n                    'native_single',",
+      "after": "                    'php_gmp', // Synergetic: no Python, subprocess or external factorization service."
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/MTProtoSession/AuthKeyHandler.php",
+      "before": "$p = PrimeModule::$method($pq);",
+      "after": "$p = \\Synergetic\\Telegram\\PrimeFactor::factor($pq);"
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/Settings/Logger.php",
+      "before": "$this->type = (PHP_SAPI === 'cli' || PHP_SAPI === 'phpdbg')\n            ? MadelineProtoLogger::ECHO_LOGGER\n            : MadelineProtoLogger::FILE_LOGGER;",
+      "after": "$this->type = MadelineProtoLogger::CALLABLE_LOGGER; // Synergetic: never emit raw Telegram payload logs."
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/Settings/Logger.php",
+      "before": "$this->extra = Magic::$script_cwd.'/MadelineProto.log';",
+      "after": "$this->extra = static function (): void {};"
+    },
+    {
+      "file": "vendor/danog/madelineproto/src/Settings/Logger.php",
+      "before": "$this->init();",
+      "after": "$this->extra = static function (): void {}; // Synergetic: restore the no-op callback after deserialization.\n        $this->init();"
+    }
+  ],
+  "files": {
+    "vendor/danog/madelineproto/src/Settings/Ipc.php": "265e9f0acbed9ffb00059fecba1b4cfce1d1469385f79505264a6e58a5cd07ab",
+    "vendor/danog/madelineproto/src/Ipc/Runner/entry.php": "bc25bb48868b4842bb4fbbe84c14c166f638015a248c13f579823fb550b52785",
+    "vendor/danog/madelineproto/src/Magic.php": "06fb03c7090bc6bdd09057c190655bead015243002571375782faa17cc8a594f",
+    "vendor/danog/madelineproto/src/MTProtoSession/AuthKeyHandler.php": "516439357664d71b83d2657f680e41b7041a25bfb167e20d4e2c896a4b088c5a",
+    "vendor/danog/madelineproto/src/Settings/Logger.php": "6e9dd1a655c4fda2f502b13651c1fef52e306cafc8667ce06e97624496ed3b72"
+  }
+}

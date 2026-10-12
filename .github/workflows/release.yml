@@ -1,0 +1,38 @@
+name: Build and publish release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Build dependency runtime
+        run: docker build -f tools/Dockerfile -t telegram-release-runtime tools
+      - name: Install pinned production dependencies
+        run: docker run --rm -v "$PWD:/workspace" -w /workspace telegram-release-runtime composer install --no-dev --no-plugins --no-scripts --no-interaction --prefer-dist
+      - name: Apply reviewed request-scoped runtime patches
+        run: python3 tools/patch-runtime.py
+      - name: Lint PHP and JavaScript
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace telegram-release-runtime sh -c 'find includes -name "*.php" -exec php -l {} \; && php -l getmcp-telegram.php'
+          node --check assets/admin.js
+          node --check assets/integration.js
+      - name: Audit dependencies
+        run: docker run --rm -v "$PWD:/workspace" -w /workspace telegram-release-runtime composer audit --locked --no-dev
+      - name: Validate local evidence and build exact packages
+        run: python3 tools/release.py
+      - name: Publish changelog and exact install asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          gh release create "$GITHUB_REF_NAME" --verify-tag --prerelease --title "$GITHUB_REF_NAME" --notes-file dist/release-notes.md "dist/getmcp-telegram-${version}.zip" "dist/getmcp-telegram-${version}-source.zip" "dist/getmcp-telegram-${version}-developer-handoff.zip" dist/SHA256SUMS.txt

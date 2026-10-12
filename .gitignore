@@ -1,0 +1,11 @@
+/vendor/
+/dist/
+/evidence/
+/tools/runtime/
+/source/
+*.log
+.env*
+*.zip
+/graphify-out/cache/
+/graphify-out/.*
+**/__pycache__/

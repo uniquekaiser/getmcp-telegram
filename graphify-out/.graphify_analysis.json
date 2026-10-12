@@ -1,0 +1,357 @@
+{
+  "communities": {
+    "0": [
+      "includes_diagnostics",
+      "includes_diagnostics_diagnostics",
+      "includes_diagnostics_diagnostics_assertready",
+      "includes_diagnostics_diagnostics_inspect",
+      "includes_fault",
+      "includes_fault_fault",
+      "includes_fault_fault_construct",
+      "includes_integration",
+      "includes_integration_closure_1",
+      "includes_integration_integration",
+      "includes_integration_integration_pause",
+      "includes_integration_integration_publish",
+      "includes_integration_integration_server",
+      "includes_integration_integration_writes",
+      "includes_plugin_closure_13",
+      "includes_plugin_plugin_assertbridge",
+      "includes_plugin_plugin_removeuser",
+      "includes_store_store_create",
+      "includes_store_store_locked",
+      "includes_store_store_update",
+      "includes_vault",
+      "includes_vault_vault",
+      "includes_vault_vault_decrypt",
+      "includes_vault_vault_encrypt",
+      "includes_vault_vault_key",
+      "includes_vault_vault_root",
+      "includes_vault_vault_session",
+      "runtimeexception",
+      "server"
+    ],
+    "1": [
+      "includes_normalize",
+      "includes_normalize_normalize",
+      "includes_normalize_normalize_error",
+      "includes_normalize_normalize_result",
+      "includes_normalize_normalize_truncated",
+      "includes_plugin_closure_16",
+      "includes_plugin_closure_18",
+      "includes_plugin_closure_22",
+      "includes_plugin_plugin",
+      "includes_plugin_plugin_action",
+      "includes_plugin_plugin_beforetool",
+      "includes_plugin_plugin_boot",
+      "includes_plugin_plugin_bridge",
+      "includes_plugin_plugin_bridgepermission",
+      "includes_plugin_plugin_page",
+      "includes_plugin_plugin_respond",
+      "includes_plugin_plugin_routes",
+      "includes_plugin_plugin_sourceurl",
+      "includes_plugin_plugin_withclient",
+      "includes_store",
+      "includes_store_store",
+      "includes_store_store_get",
+      "includes_store_store_listing",
+      "includes_store_store_migrate",
+      "includes_store_store_owned",
+      "includes_store_store_present",
+      "throwable",
+      "wp_error",
+      "wp_rest_request"
+    ],
+    "2": [
+      "includes_plugin",
+      "includes_plugin_closure_1",
+      "includes_plugin_closure_10",
+      "includes_plugin_closure_11",
+      "includes_plugin_closure_12",
+      "includes_plugin_closure_14",
+      "includes_plugin_closure_15",
+      "includes_plugin_closure_17",
+      "includes_plugin_closure_19",
+      "includes_plugin_closure_2",
+      "includes_plugin_closure_20",
+      "includes_plugin_closure_21",
+      "includes_plugin_closure_23",
+      "includes_plugin_closure_24",
+      "includes_plugin_closure_25",
+      "includes_plugin_closure_26",
+      "includes_plugin_closure_27",
+      "includes_plugin_closure_28",
+      "includes_plugin_closure_3",
+      "includes_plugin_closure_4",
+      "includes_plugin_closure_6",
+      "includes_plugin_closure_8",
+      "includes_plugin_closure_9"
+    ],
+    "3": [
+      "includes_catalog",
+      "includes_catalog_catalog",
+      "includes_catalog_catalog_all",
+      "includes_catalog_catalog_arguments",
+      "includes_catalog_catalog_validate",
+      "includes_plugin_closure_5",
+      "includes_plugin_closure_7",
+      "tests_integration",
+      "tests_integration_check",
+      "tests_integration_closure_1",
+      "tests_integration_closure_2",
+      "tests_integration_closure_3",
+      "tests_integration_closure_4",
+      "tests_integration_closure_5",
+      "tests_integration_closure_6",
+      "tests_integration_closure_7",
+      "tests_integration_req",
+      "wp_rest_response"
+    ],
+    "4": [
+      "docs_development",
+      "docs_development_developer_handoff",
+      "docs_migration_rollback",
+      "docs_migration_rollback_migration_and_rollback",
+      "docs_verification",
+      "docs_verification_verification_status_development_preview_0_1_0",
+      "readme",
+      "readme_coverage",
+      "readme_development",
+      "readme_getmcp_telegram_extension",
+      "readme_hosting",
+      "readme_installation_and_connection",
+      "readme_runtime_and_source"
+    ],
+    "5": [
+      "api",
+      "includes_client",
+      "includes_client_client",
+      "includes_client_client_close",
+      "includes_client_client_construct",
+      "includes_client_client_invoke",
+      "includes_client_client_login",
+      "includes_client_client_logout",
+      "includes_client_client_state",
+      "includes_client_closure_1",
+      "includes_client_closure_2"
+    ],
+    "6": [
+      "composer",
+      "composer_config",
+      "composer_config_allow_plugins",
+      "composer_config_sort_packages",
+      "composer_description",
+      "composer_license",
+      "composer_name",
+      "composer_require",
+      "composer_require_danog_madelineproto",
+      "composer_require_php",
+      "composer_type"
+    ],
+    "7": [
+      "tests_fake_driver",
+      "tests_fake_driver_closure_1",
+      "tests_fake_driver_closure_2",
+      "tests_fake_driver_telegramfixtureclient",
+      "tests_fake_driver_telegramfixtureclient_close",
+      "tests_fake_driver_telegramfixtureclient_construct",
+      "tests_fake_driver_telegramfixtureclient_invoke",
+      "tests_fake_driver_telegramfixtureclient_login",
+      "tests_fake_driver_telegramfixtureclient_logout",
+      "tests_fake_driver_telegramfixtureclient_state"
+    ],
+    "8": [
+      "includes_primefactor",
+      "includes_primefactor_closure_1",
+      "includes_primefactor_primefactor",
+      "includes_primefactor_primefactor_factor",
+      "tests_factorization"
+    ],
+    "9": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "shutil",
+      "tools_build",
+      "tools_build_rationale_1",
+      "tools_build_runtime_file",
+      "tools_patch_runtime",
+      "tools_patch_runtime_rationale_1",
+      "tools_test_definitions",
+      "zipfile"
+    ],
+    "10": [
+      "assets_admin",
+      "assets_admin_load"
+    ],
+    "11": [
+      "getmcp_telegram",
+      "getmcp_telegram_closure_1"
+    ],
+    "12": [
+      "tests_catalog_contract"
+    ]
+  },
+  "cohesion": {
+    "0": 0.0960591133004926,
+    "1": 0.0960591133004926,
+    "2": 0.08695652173913043,
+    "3": 0.11764705882352941,
+    "4": 0.15384615384615385,
+    "5": 0.21818181818181817,
+    "6": 0.18181818181818182,
+    "7": 0.26666666666666666,
+    "8": 0.4,
+    "9": 0.21212121212121213,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0
+  },
+  "gods": [
+    {
+      "id": "includes_fault_fault",
+      "label": "Fault",
+      "degree": 29
+    },
+    {
+      "id": "includes_store_store",
+      "label": "Store",
+      "degree": 25
+    },
+    {
+      "id": "includes_plugin_plugin",
+      "label": "Plugin",
+      "degree": 16
+    },
+    {
+      "id": "includes_catalog_catalog",
+      "label": "Catalog",
+      "degree": 15
+    },
+    {
+      "id": "includes_vault_vault",
+      "label": "Vault",
+      "degree": 11
+    },
+    {
+      "id": "includes_client_client",
+      "label": "Client",
+      "degree": 10
+    },
+    {
+      "id": "includes_integration_integration",
+      "label": "Integration",
+      "degree": 10
+    },
+    {
+      "id": "includes_normalize_normalize",
+      "label": "Normalize",
+      "degree": 10
+    },
+    {
+      "id": "includes_diagnostics_diagnostics",
+      "label": "Diagnostics",
+      "degree": 9
+    },
+    {
+      "id": "docs_development_developer_handoff",
+      "label": "Developer handoff",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Developer handoff",
+      "target": "Catalog",
+      "source_files": [
+        "docs/DEVELOPMENT.md",
+        "includes/Catalog.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Developer handoff",
+      "target": "Client",
+      "source_files": [
+        "docs/DEVELOPMENT.md",
+        "includes/Client.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Developer handoff",
+      "target": "Diagnostics",
+      "source_files": [
+        "docs/DEVELOPMENT.md",
+        "includes/Diagnostics.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Developer handoff",
+      "target": "Integration",
+      "source_files": [
+        "docs/DEVELOPMENT.md",
+        "includes/Integration.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Developer handoff",
+      "target": "Normalize",
+      "source_files": [
+        "docs/DEVELOPMENT.md",
+        "includes/Normalize.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Fault` connect `Community 0` to `Community 1`, `Community 3`, `Community 5`, `Community 7`, `Community 8`?",
+      "why": "High betweenness centrality (0.242) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Developer handoff` connect `Community 4` to `Community 0`, `Community 1`, `Community 3`, `Community 5`?",
+      "why": "High betweenness centrality (0.157) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Plugin` connect `Community 1` to `Community 0`, `Community 2`, `Community 3`, `Community 4`?",
+      "why": "High betweenness centrality (0.149) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 25 inferred relationships involving `Fault` (e.g. with `.arguments()` and `.validate()`) actually correct?",
+      "why": "`Fault` has 25 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 15 inferred relationships involving `Store` (e.g. with `Developer handoff` and `.publish()`) actually correct?",
+      "why": "`Store` has 15 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `Plugin` (e.g. with `Developer handoff` and `.publish()`) actually correct?",
+      "why": "`Plugin` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 9 inferred relationships involving `Catalog` (e.g. with `Developer handoff` and `.invoke()`) actually correct?",
+      "why": "`Catalog` has 9 INFERRED edges - model-reasoned connections that need verification."
+    }
+  ]
+}

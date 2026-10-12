@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0",
+  "subject": "plugin",
+  "features": [
+    {
+      "id": "telegram.hosting",
+      "title": "Hosting requirements",
+      "intent": "Refuse unsupported hosting without changing server configuration.",
+      "provenance": [
+        {
+          "kind": "owner-requirement",
+          "reference": "Conversation: separate personal Telegram GetMCP extension",
+          "description": "Personal accounts; separate plugin; ordinary hosting with no companion service or GetMCP file modification."
+        }
+      ],
+      "dependencies": [
+        {
+          "slug": "getmcp",
+          "version": "1.7.0"
+        },
+        {
+          "slug": "getmcp-extensions",
+          "version": "1.2.3"
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "hosting-refusal",
+          "title": "Hosting refusal",
+          "case": "refusal",
+          "role": "administrator",
+          "entry": {
+            "surface": "rest",
+            "path": "/wp-json/getmcp-telegram/v1/connections"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Diagnostics.php",
+              "line": 33
+            }
+          ],
+          "inputs": {
+            "name": "Synthetic",
+            "api_id": 12345,
+            "api_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        }
+      ]
+    },
+    {
+      "id": "telegram.accounts",
+      "title": "Personal account connections",
+      "intent": "Own and manage isolated personal Telegram accounts with encrypted application credentials.",
+      "provenance": [
+        {
+          "kind": "owner-requirement",
+          "reference": "Conversation: separate personal Telegram GetMCP extension",
+          "description": "Personal accounts; separate plugin; ordinary hosting with no companion service or GetMCP file modification."
+        }
+      ],
+      "dependencies": [
+        {
+          "slug": "getmcp",
+          "version": "1.7.0"
+        },
+        {
+          "slug": "getmcp-extensions",
+          "version": "1.2.3"
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "save-reload",
+          "title": "Save reload",
+          "case": "positive",
+          "role": "administrator",
+          "entry": {
+            "surface": "admin",
+            "path": "/wp-admin/admin.php?page=getmcp-telegram"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Store.php",
+              "line": 39
+            }
+          ],
+          "inputs": {
+            "name": "Synthetic",
+            "api_id": 12345,
+            "api_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        },
+        {
+          "id": "owner-isolation",
+          "title": "Owner isolation",
+          "case": "refusal",
+          "role": "administrator",
+          "entry": {
+            "surface": "rest",
+            "path": "/wp-json/getmcp-telegram/v1/connections/1/verify"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Plugin.php",
+              "line": 93
+            }
+          ],
+          "inputs": {},
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        },
+        {
+          "id": "login-two-factor",
+          "title": "Login two factor",
+          "case": "positive",
+          "role": "administrator",
+          "entry": {
+            "surface": "admin",
+            "path": "/wp-admin/admin.php?page=getmcp-telegram"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Client.php",
+              "line": 37
+            }
+          ],
+          "inputs": {
+            "phone": "+573001234567",
+            "code": "11111",
+            "password": "fixture-only-2fa"
+          },
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        },
+        {
+          "id": "disconnect",
+          "title": "Disconnect",
+          "case": "positive",
+          "role": "administrator",
+          "entry": {
+            "surface": "admin",
+            "path": "/wp-admin/admin.php?page=getmcp-telegram"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Plugin.php",
+              "line": 104
+            }
+          ],
+          "inputs": {},
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        }
+      ]
+    },
+    {
+      "id": "telegram.publication",
+      "title": "Native tools and gateway membership",
+      "intent": "Publish reviewed tools with explicit ownership and gateway delegation; respect existing licensing and access.",
+      "provenance": [
+        {
+          "kind": "owner-requirement",
+          "reference": "Conversation: separate personal Telegram GetMCP extension",
+          "description": "Personal accounts; separate plugin; ordinary hosting with no companion service or GetMCP file modification."
+        }
+      ],
+      "dependencies": [
+        {
+          "slug": "getmcp",
+          "version": "1.7.0"
+        },
+        {
+          "slug": "getmcp-extensions",
+          "version": "1.2.3"
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "gateway-delegation",
+          "title": "Gateway delegation",
+          "case": "positive",
+          "role": "administrator",
+          "entry": {
+            "surface": "rest",
+            "path": "/wp-json/getmcp-telegram/v1/connections/1/publish"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Integration.php",
+              "line": 12
+            }
+          ],
+          "inputs": {
+            "acknowledge_delegation": true
+          },
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        },
+        {
+          "id": "removed-membership",
+          "title": "Removed membership",
+          "case": "refusal",
+          "role": "administrator",
+          "entry": {
+            "surface": "rest",
+            "path": "/mcp/synthetic-gateway"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Plugin.php",
+              "line": 70
+            }
+          ],
+          "inputs": {},
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        }
+      ]
+    },
+    {
+      "id": "telegram.writes",
+      "title": "Mutation controls",
+      "intent": "Keep writes disabled until verification and explicit enablement, and require confirmation for each call.",
+      "provenance": [
+        {
+          "kind": "owner-requirement",
+          "reference": "Conversation: separate personal Telegram GetMCP extension",
+          "description": "Personal accounts; separate plugin; ordinary hosting with no companion service or GetMCP file modification."
+        }
+      ],
+      "dependencies": [
+        {
+          "slug": "getmcp",
+          "version": "1.7.0"
+        },
+        {
+          "slug": "getmcp-extensions",
+          "version": "1.2.3"
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "disabled-write",
+          "title": "Disabled write",
+          "case": "refusal",
+          "role": "administrator",
+          "entry": {
+            "surface": "rest",
+            "path": "/wp-json/getmcp-telegram/v1/bridge/1/send_message"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Plugin.php",
+              "line": 134
+            }
+          ],
+          "inputs": {
+            "peer": "@synthetic",
+            "message": "Fixture only",
+            "confirm": true
+          },
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        },
+        {
+          "id": "confirmed-fixture-write",
+          "title": "Confirmed fixture write",
+          "case": "positive",
+          "role": "administrator",
+          "entry": {
+            "surface": "rest",
+            "path": "/wp-json/getmcp-telegram/v1/bridge/1/send_message"
+          },
+          "sourceRefs": [
+            {
+              "path": "includes/Catalog.php",
+              "line": 70
+            }
+          ],
+          "inputs": {
+            "peer": "@synthetic",
+            "message": "Fixture only",
+            "confirm": true
+          },
+          "status": "gap",
+          "reason": "CLI/WordPress fixtures cover this requirement separately; no immutable Studio snapshot, reviewed binding or supported synthetic-driver recipe has been imported.",
+          "recovery": "Import the local synthetic fixture into Studio, pin its connection/server identifiers and independent database oracle, review the preview, then bind typed actions. Use fixtures for all writes."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "path": "evidence",
+      "reason": "Verification reports and screenshots only; no runtime code."
+    }
+  ]
+}

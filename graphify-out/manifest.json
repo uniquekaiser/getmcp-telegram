@@ -1,0 +1,170 @@
+{
+  "assets/admin.js": {
+    "mtime": 1791764301.3087955,
+    "seen": 1791764312.7724547,
+    "ast_hash": "3f01c928ad5e663ec3abad9921631eca",
+    "semantic_hash": ""
+  },
+  "composer.json": {
+    "mtime": 1791760865.592386,
+    "seen": 1791762917.9258375,
+    "ast_hash": "a4ec9996895f86281d7e24292a12f4ca",
+    "semantic_hash": ""
+  },
+  "getmcp-telegram.php": {
+    "mtime": 1791760865.5975657,
+    "seen": 1791762917.9258428,
+    "ast_hash": "c4a014b34016d5969bb41ab74778b06d",
+    "semantic_hash": ""
+  },
+  "includes/Catalog.php": {
+    "mtime": 1791762089.597505,
+    "seen": 1791762917.9258456,
+    "ast_hash": "bfd5578da81f736dc4abf099919627bd",
+    "semantic_hash": ""
+  },
+  "includes/Client.php": {
+    "mtime": 1791765629.7964585,
+    "seen": 1791765644.600614,
+    "ast_hash": "efee8faf836433f3d997836f4fbaf4c2",
+    "semantic_hash": ""
+  },
+  "includes/Diagnostics.php": {
+    "mtime": 1791763206.4503071,
+    "seen": 1791763623.1110113,
+    "ast_hash": "0f1e8faf960a2b4a18c91085c3a63a0a",
+    "semantic_hash": ""
+  },
+  "includes/Fault.php": {
+    "mtime": 1791760865.6060376,
+    "seen": 1791762917.9258523,
+    "ast_hash": "7e7c248261913b07bf91eef9f5a099d6",
+    "semantic_hash": ""
+  },
+  "includes/Integration.php": {
+    "mtime": 1791763609.6643164,
+    "seen": 1791763623.1110144,
+    "ast_hash": "54f91c318e7a86d3a21afdcf84eb8896",
+    "semantic_hash": ""
+  },
+  "includes/Normalize.php": {
+    "mtime": 1791762913.7326212,
+    "seen": 1791762917.9258566,
+    "ast_hash": "cb5f15e6d2071900a170f68baa474d15",
+    "semantic_hash": ""
+  },
+  "includes/Plugin.php": {
+    "mtime": 1791765899.8085222,
+    "seen": 1791766010.457353,
+    "ast_hash": "99c433889e056bf9ad148e7414f1f2aa",
+    "semantic_hash": ""
+  },
+  "includes/Store.php": {
+    "mtime": 1791762770.2716062,
+    "seen": 1791762917.9258604,
+    "ast_hash": "882c4a9bbb617852cd5c267ba4d92873",
+    "semantic_hash": ""
+  },
+  "includes/Vault.php": {
+    "mtime": 1791760865.6090422,
+    "seen": 1791762917.925863,
+    "ast_hash": "a7143986bb5596f8c2b89249ad6e4c7e",
+    "semantic_hash": ""
+  },
+  "tests/catalog-contract.php": {
+    "mtime": 1791762089.5995052,
+    "seen": 1791762917.9258645,
+    "ast_hash": "c7e006dae13244b63318e2a5bcaf4ea8",
+    "semantic_hash": ""
+  },
+  "tests/fake-driver.php": {
+    "mtime": 1791764301.308273,
+    "seen": 1791764312.7724981,
+    "ast_hash": "17d9c7cfd34683ad8dd43e3b300b7f83",
+    "semantic_hash": ""
+  },
+  "tests/integration.php": {
+    "mtime": 1791765992.1790402,
+    "seen": 1791766010.4573622,
+    "ast_hash": "be8dde279c6686c1382e6def317ec015",
+    "semantic_hash": ""
+  },
+  "tools/patch-runtime.py": {
+    "mtime": 1791765119.8915837,
+    "seen": 1791765124.9226751,
+    "ast_hash": "453c59a0da0d1c894283f5023a885be9",
+    "semantic_hash": ""
+  },
+  "vendor-patch.json": {
+    "mtime": 1791765121.1906254,
+    "seen": 1791765124.9226775,
+    "ast_hash": "5267c4d5023b3f5f9c511305604c4102",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1791765629.7974591,
+    "seen": 1791765644.6006308,
+    "ast_hash": "752be7c310fd3f709ae0b65ad03e5645",
+    "semantic_hash": ""
+  },
+  "docs/DEVELOPMENT.md": {
+    "mtime": 1791762632.042434,
+    "seen": 1791762917.9258747,
+    "ast_hash": "371c1a65850c570ff92e00e1e3d689b6",
+    "semantic_hash": ""
+  },
+  "docs/MIGRATION-ROLLBACK.md": {
+    "mtime": 1791762632.0389018,
+    "seen": 1791762917.9258761,
+    "ast_hash": "31d2ca45f8888fec86736cf57fcb3332",
+    "semantic_hash": ""
+  },
+  "readme.txt": {
+    "mtime": 1791762632.0599608,
+    "seen": 1791762917.925878,
+    "ast_hash": "b3a9d7871a3108805a74835dd1820d13",
+    "semantic_hash": ""
+  },
+  "tools/compose.yaml": {
+    "mtime": 1791760865.5965648,
+    "seen": 1791762917.9258797,
+    "ast_hash": "acaf4509b5fa3fff7be1ef62bcfa7b93",
+    "semantic_hash": ""
+  },
+  "docs/testing/test-definitions.json": {
+    "mtime": 1791766008.2361987,
+    "seen": 1791766010.4573426,
+    "ast_hash": "c364a8ea2afd66bf3cabb9f7aa0735e5",
+    "semantic_hash": ""
+  },
+  "includes/PrimeFactor.php": {
+    "mtime": 1791763361.1106899,
+    "seen": 1791763623.1110184,
+    "ast_hash": "a5176307d7d7a7270b197a69ce139d7f",
+    "semantic_hash": ""
+  },
+  "tests/factorization.php": {
+    "mtime": 1791765629.7974591,
+    "seen": 1791765644.6006246,
+    "ast_hash": "2f0c290bbd2211c4d0394243747f3248",
+    "semantic_hash": ""
+  },
+  "tools/build.py": {
+    "mtime": 1791765899.8119967,
+    "seen": 1791766010.4573631,
+    "ast_hash": "bb61bf5d70b4027deef355bebf396c6b",
+    "semantic_hash": ""
+  },
+  "tools/test-definitions.py": {
+    "mtime": 1791763002.548205,
+    "seen": 1791763623.11103,
+    "ast_hash": "03de35f8e14ef5d5c7b89fc65f8274c8",
+    "semantic_hash": ""
+  },
+  "docs/VERIFICATION.md": {
+    "mtime": 1791765899.8109963,
+    "seen": 1791766010.4573705,
+    "ast_hash": "c8aea425d43e3810f038e84b474fe236",
+    "semantic_hash": ""
+  }
+}
