@@ -18,7 +18,7 @@ jobs:
       - name: Build dependency runtime
         run: docker build -f tools/Dockerfile -t telegram-release-runtime tools
       - name: Install pinned production dependencies
-        run: docker run --rm -v "$PWD:/workspace" -w /workspace telegram-release-runtime composer install --no-dev --no-plugins --no-scripts --no-interaction --prefer-dist
+        run: docker run --rm --user "$(id -u):$(id -g)" -e COMPOSER_HOME=/tmp/composer -v "$PWD:/workspace" -w /workspace telegram-release-runtime composer install --no-dev --no-plugins --no-scripts --no-interaction --prefer-dist
       - name: Apply reviewed request-scoped runtime patches
         run: python3 tools/patch-runtime.py
       - name: Lint PHP and JavaScript

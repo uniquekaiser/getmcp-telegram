@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/uniquekaiser/getmcp-telegram
  * Update URI: https://github.com/uniquekaiser/getmcp-telegram
  * Description: Personal Telegram accounts through native GetMCP tools, without a companion application.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Synergetic Dev
  * Author URI: https://synergetic.dev/
  * Requires PHP: 8.3
@@ -16,7 +16,7 @@
  */
 if (!defined('ABSPATH')) { exit; }
 define('GETMCP_TELEGRAM_PATH', __DIR__ . '/');
-define('GETMCP_TELEGRAM_VERSION', '0.1.0');
+define('GETMCP_TELEGRAM_VERSION', '0.1.1');
 spl_autoload_register(static function (string $class): void {
     if (str_starts_with($class, 'Synergetic\\Telegram\\')) {
         $file = __DIR__ . '/includes/' . substr($class, strlen('Synergetic\\Telegram\\')) . '.php';

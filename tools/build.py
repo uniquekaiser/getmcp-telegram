@@ -10,7 +10,7 @@ for file, expected in manifest['files'].items():
 result = json.loads((root / 'evidence/integration-php83.txt').read_text().splitlines()[-1])
 assert not result['failed'] and result['passed'] >= 60, result
 version = re.search(r'\* Version: ([\d.]+)', (root / 'getmcp-telegram.php').read_text())[1]
-assert version == '0.1.0'
+assert version == '0.1.1'
 exclude = {'.git', 'dist', 'evidence', '__pycache__', '.playwright-cli', 'runtime', '.venv', 'source'}
 files = [p for p in root.rglob('*') if p.is_file() and not any(part in exclude for part in p.relative_to(root).parts)]
 assert not any(p.name == 'wp-config.php' or p.name.startswith('.env') and not p.name.endswith('.example') for p in files)

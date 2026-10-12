@@ -1,10 +1,10 @@
 {
   "inputs": {
-    "CHANGELOG.md": "072c6d403fbed72987d800e9f99fe823ef57fe489aadc84b7f157890e734e2a0",
+    "CHANGELOG.md": "7717c57ab8db9be282827b5699c49050338af78c76fe545b3e9bbe05f6407f99",
     "composer.json": "74a0455f95fb8ab93d3aeedc83a7e3ba706d696ed1f271f9f6857639c9003e93",
     "composer.lock": "f54845cca7cb5338cd23fef4110b1cd47bc0f601426fdd42c2ca276d4d68c1a8",
-    "getmcp-telegram.php": "37b917893a569cd77ff48887b20b375a22988d97c31fc7b59dd85fbfeb7cd2e4",
-    "readme.txt": "8128cdd73928c3072666462b27a85b835417f5ab0e53e77426c5d586036fa562",
+    "getmcp-telegram.php": "7807008c38daaadcc946faa9819b6d62bf2cf37545e1c301526078282e2af21a",
+    "readme.txt": "93c95e6d8148cc154d79b162697f47385900861096f08d0ff379da27949b124a",
     "vendor-patch.json": "f113ab78d3573966e6bc04029cc0e58fab4ceb5f07e99a76d8bd982411a1345e",
     "assets/admin.js": "ffda7a9be442dbef2b99c7ac0c596a2d9f82e72e2159e1bee3187ba453794147",
     "assets/integration.js": "b2363f1be72070d2b723016527287192fad762a54dd12650a8e912dbef63d141",
@@ -28,12 +28,12 @@
     "tests/integration.php": "80d562a7725da5d900788996459e423dc566a276342c52766058ebc9dc2a85a7",
     "tests/marketing-catalogue.php": "89e9d8f28b49114370dcb17059d13944d18fdf3c5df142d86bae2a56ce19b976",
     "tests/updater.php": "3ae6b515dee9c4df6c0ce6bcdd1a2a64f3244e143fb8f777585d695ae6b3ef22",
-    "tools/build.py": "b4d8f28160b4f9608d9f10ee6aa8bc0b7bf474863a5fd59dbf46a956e397dc13",
+    "tools/build.py": "3cf8c8a2624928675692245e7f7e453eb89a0e4479885cc2ce5d73ee3ee1252e",
     "tools/patch-runtime.py": "a46919f05c4c503471db5e2304b50f765d92aa3a11cbe6d2b610cfcb9a4abe5d",
     "tools/release.py": "46701fa0a6d1bacd12f53eb665995e6c9d94468a6184809e24c52c0d92a69f42",
     "tools/test-definitions.py": "6bf217a3307a6b2e4a4538b52c40c68c3bd7d1058161f5559cdbbd30586ff5e2",
     "docs/testing/test-definitions.json": "bd7ca175519d17391764d79b6546ef43cab5c6a2aa7c17ea5e0a86c4ac7600b0",
-    ".github/workflows/release.yml": "54897dfe02c13fed0566c06a8033d975dc9087d6392300264117d3db5eaf2422"
+    ".github/workflows/release.yml": "965cbc24bee7d3b2a52552c9dde4e2d7af39846ca57ff59c750c15b0f1f7239f"
   },
   "integration": {
     "passed": 60,
@@ -54,12 +54,13 @@
     "Telegram template REST permissions",
     "updater exact-asset and source guard contracts",
     "browser catalogue search and navigation",
-    "browser marketing draft installation"
+    "browser marketing draft installation",
+    "Clean Linux volume: UID 1001 Composer install, runtime patching and release builder passed"
   ],
   "unavailable": [
     "Real Telegram accounts and production session transport",
     "Normal prior-version public updater upgrade: first release not published",
     "PHP 8.4 and other hosting platforms"
   ],
-  "hosted": "Not dispatched; tag-only release workflow configured"
+  "hosted": "0.1.0 failed before publication on root-owned dependencies; corrected pipeline passed locally in a clean Linux volume; 0.1.1 exact-tag run pending."
 }
